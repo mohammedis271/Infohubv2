@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="8dp"
+    android:outlineAmbientShadowColor="@color/dark_gray"
+    app:cardBackgroundColor="@color/silver_white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+
+    app:contentPadding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/title_text_card_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/image_resource_card_layout"
+            android:layout_toEndOf="@id/image_resource_card_layout"
+            android:text="Author"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/description_text_card_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/image_resource_card_layout"
+            android:layout_below="@id/title_text_card_layout"
+            android:text="content"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/image_resource_card_layout"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_centerVertical="true"
+            android:paddingStart="3sp"
+            android:paddingEnd="3sp"
+            app:srcCompat="@android:drawable/screen_background_light_transparent" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

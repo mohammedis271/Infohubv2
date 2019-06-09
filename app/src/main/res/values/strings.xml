@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">Infohubv2</string>
+
+
+    <string name="action_toggle">Toggle Side Panel</string>
+
+    <!-- Drawer Items -->
+    <string name="drawer_item_first">Home</string>
+    <string name="drawer_item_second">News</string>
+    <string name="drawer_item_third">Movies</string>
+    <string name="drawer_item_fourth">Fourth item</string>
+    <string name="drawer_item_fifth">Fifth item</string>
+    <string name="drawer_item_sixth">Sixth item</string>
+    <string name="drawer_item_seventh">Seventh item</string>
+    <string name="drawer_item_eighth">Eighth item</string>
+    <string name="drawer_item_ninth">Ninth item</string>
+    <string name="drawer_item_tenth">Tenth item</string>
+    <string name="drawer_item_eleventh">Eleventh item</string>
+    <string name="drawer_item_twelfth">Twelfth item</string>
+    <string name="title_activity_article_view">ArticleViewActivity</string>
+
+
+    <!-- App Strings -->
+
+
+    <string name="no_content">No Content</string>
+    <string name="loading_articles">Loading Articles...</string>
+    <string name="no_articles_to_load">No Articles To Load</string>
+    <string name="loading_movies">Loading Movies</string>
+    <string-array name="types_of_search">
+        <item>Top Headlines</item>
+        <item>Everything</item>
+        <item>Latest Stories</item>
+        <item>Sources</item>
+    </string-array>
+
+    <string-array name="types_of_languages_supported">
+        <item>Arabic (AR)</item>
+        <item>German (DE)</item>
+        <item>English (EN)</item>
+        <item>Spanish (ES)</item>
+        <item>French (FR)</item>
+        <item>Hebrew (HE)</item>
+        <item>Italian (IT)</item>
+        <item>Dutch (NL)</item>
+        <item>Portuguese (PT)</item>
+        <item>Russian (RU)</item>
+        <item>Chinese (SE)</item>
+    </string-array>
+
+    <string-array name="sort_by_supported">
+        <item>Relevancy</item>
+        <item>Popularity</item>
+    </string-array>
+    <string-array name="country_choice_supported">
+        <item>United Arab Emirates (AE)</item>
+        <item>Argentina (AR)</item>
+        <item>Austria (AT)</item>
+        <item>Australia (AU)</item>
+        <item>Belguim (BE)</item>
+        <item>Bulgaria (BG)</item>
+        <item>Brazil (BR)</item>
+        <item>Canada (CA)</item>
+        <item>Switzerland (CH)</item>
+        <item>China (CN)</item>
+        <item>Colombia (CO)</item>
+        <item>Cuba (CU)</item>
+        <item>Czech Republic (CZ)</item>
+        <item>Germany (DE)</item>
+        <item>Egypt (EG)</item>
+        <item>France (FR)</item>
+        <item>United Kingdom (GB)</item>
+        <item>Greece (GR)</item>
+        <item>Hong Kong (HK)</item>
+        <item>Hungary (HU)</item>
+        <item>Indonesia (ID)</item>
+        <item>Ireland (IE)</item>
+        <item>Israel (IL)</item>
+        <item>India (IN)</item>
+        <item>Italy (IT)</item>
+        <item>Japan (JP)</item>
+        <item>Korea (KR)</item>
+        <item>Lithuania (LT)</item>
+        <item>Latvia (LV)</item>
+        <item>Morocco (MA)</item>
+        <item>Mexico (MX)</item>
+        <item>Malaysia (MY)</item>
+        <item>Nigeria (NG)</item>
+        <item>Netherlands (NL)</item>
+        <item>Norway (NO)</item>
+        <item>New Zealand (NZ)</item>
+        <item>Philippines (PH)</item>
+        <item>Poland (PL)</item>
+        <item>Portugal (PT)</item>
+        <item>Romania (RO)</item>
+        <item>Russia (RU)</item>
+        <item>Saudi Arabia (SA)</item>
+        <item>Sweden (SE)</item>
+        <item>Singapore (SG)</item>
+        <item>Slovenia (SI)</item>
+        <item>Slovakia (SK)</item>
+        <item>Thailand (TH)</item>
+        <item>Turkey (TR)</item>
+        <item>Taiwan (TW)</item>
+        <item>Ukraine (UA)</item>
+        <item>United States (US)</item>
+        <item>Venezuela (VE)</item>
+        <item>South Africa (ZA)</item>
+
+    </string-array>
+
+
+    <string name="diagonallayout_description"><![CDATA[Hugh Michael Jackman is an Australian actor, singer and producer. Jackman has won international recognition for playing different roles in various film genres. \n\nHe is best known for his long-running role as Wolverine in the X-Men film series, as well as for his lead roles in the romantic-comedy fantasy Kate & Leopold (2001), the action-horror film Van Helsing (2004)…]]></string>
+    <string name="arclayout_description">After the formation of the Galactic Empire, the Rebel Alliance recruits Jyn Erso (Felicity Jones) to work with a team including Cassian Andor (Diego Luna) to steal the design schematics of the Empire\'s new superweapon, the Death Star.</string>
+    <string name="arclayout_development">In February 2013, The Walt Disney Company CEO Bob Iger confirmed the development of two stand-alone films, each individually written by Lawrence Kasdan and Simon Kinberg. On February 6, Entertainment Weekly reported that Lucasfilm is working on two films featuring Han Solo and Boba Fett. Disney CFO Jay Rasulo has described the stand-alone films as origin stories. Kathleen Kennedy explained that the stand-alone films will not crossover with the films of the sequel trilogy…</string>
+
+</resources>

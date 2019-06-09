@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArticleViewActivity">
+
+    <WebView
+        android:id="@+id/webViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/floatingActionMenu"
+        android:layout_alignBottom="@+id/webViewContent"
+        android:layout_alignEnd="@+id/webViewContent"
+        android:layout_alignParentEnd="true"
+        app:menu_colorNormal="@color/fab_menu_color"
+        app:menu_colorRipple="@color/dark_gray"
+        app:menu_labels_colorNormal="@color/fab_menu_color"
+        app:menu_labels_textColor="@color/white"
+        android:layout_margin="16dp"
+        app:menu_showShadow="true"
+        app:menu_fab_label=""
+        app:menu_openDirection="up"
+        app:menu_backgroundColor="@android:color/transparent">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/fab_button_option_1"
+            app:fab_colorRipple="@color/dark_gray"
+            app:fab_label="Save Website"
+            app:fab_size="mini"
+            android:id="@+id/saveWebsiteFab"
+            android:src="@drawable/ic_save_black_24dp"/>
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

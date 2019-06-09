@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.github.florent37.shapeofview.shapes.DiagonalView
+            android:id="@+id/diagonalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:elevation="10dip"
+            app:shape_arc_height="-50dp"
+            app:shape_arc_position="bottom"
+            app:shape_diagonal_angle="10"
+            app:shape_diagonal_position="bottom">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/drop_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+        </com.github.florent37.shapeofview.shapes.DiagonalView>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="325dp"
+            android:src="@drawable/arclayout_ic_add"
+            app:elevation="15dp"
+            app:fabSize="normal"
+            app:fab_colorNormal="@color/fab_menu_color"
+            app:fab_colorRipple="@color/dark_gray"
+            app:fab_showShadow="true"
+            >
+        </com.github.clans.fab.FloatingActionButton>
+
+        <LinearLayout
+            android:id="@+id/card_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/diagonalLayout"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="6sp">
+            <!--Card 1 - BIG heading, rating | duration | genre,genre,genre |
+            poster, overview, flat button (takes user to homepage of movie www....) -->
+            <!--underneath have a rating and vote count with a nice icon -->
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="4dp"
+                android:outlineAmbientShadowColor="@color/dark_gray"
+                app:cardBackgroundColor="@color/silver_white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                app:contentPadding="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:id="@+id/card1_heading_movie_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Movie Title"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/card1_rating_duration_genre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card1_heading_movie_name"
+                        android:text="rating | duration | genre,genre,genre |"
+                        android:textColor="@color/dark_gray" />
+
+                    <ImageView
+                        android:id="@+id/card1_poster_image_view"
+                        android:layout_width="100dp"
+                        android:layout_height="160dp"
+                        android:layout_below="@+id/card1_rating_duration_genre"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/card1_overview_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/card1_flat_button_go_to_site"
+                        android:layout_alignTop="@id/card1_poster_image_view"
+                        android:layout_alignEnd="@id/card1_flat_button_go_to_site"
+                        android:layout_alignBottom="@id/card1_poster_image_view"
+                        android:layout_toEndOf="@id/card1_poster_image_view"
+                        android:padding="8dp"
+                        android:text="@string/arclayout_description" />
+
+                    <info.hoang8f.widget.FButton
+                        android:id="@+id/card1_flat_button_go_to_site"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_below="@id/card1_poster_image_view"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="80sp"
+                        android:layout_toEndOf="@id/card1_poster_image_view"
+                        android:fontFamily="@font/thasadith_bold_italic"
+                        android:text="Go to site"
+                        android:textSize="12sp"
+                        android:onClick="goToHomeWebsite"
+                        app:buttonColor="@color/fbutton_color_wet_asphalt" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Card 2 - Cast (Side scroll view with picture, actor name and character (show 10) -->
+            <!--have a show all in the top line of the card, below show a button to see the crew -->
+            <!--Must have a heading (CAST AND CREW) -->
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:outlineAmbientShadowColor="@color/dark_gray"
+                app:cardBackgroundColor="@color/silver_white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:contentPadding="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="6dp">
+
+                    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="16dp"
+                                    android:text="CAST"
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_margin="18dp"
+                                    android:onClick="seeAllCastAndCrew"
+                                    android:text="See All"
+                                    android:textColor="@color/fbutton_color_peter_river"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+
+                            <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                                android:id="@+id/card2_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                app:msrv_gravity="start"
+                                app:msrv_ms_per_inch="@dimen/normal_speed"
+                                app:msrv_snap_count="1" />
+                        </LinearLayout>
+
+                    </ScrollView>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Card 3 - Trailers ( depending on number of trialers show cards ...
+            when clicked new activity and a video player-->
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:outlineAmbientShadowColor="@color/dark_gray"
+                app:cardBackgroundColor="@color/silver_white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                app:contentPadding="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/card3_trailers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="TRAILERS"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <fragment
+                        android:id="@+id/youtube_fragment"
+                        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card3_trailers"
+                        />
+
+                    <TextView
+                        android:id="@+id/card3_trailer_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_content"
+                        android:textColor="@color/fbutton_color_wet_asphalt"
+                        android:layout_below="@+id/youtube_fragment"
+                        android:layout_margin="2sp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="18dp"
+                        android:onClick="seeAllTrailers"
+                        android:text="See All"
+                        android:textColor="@color/fbutton_color_peter_river"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Card 4 - reviews not really sure how we gonna pull this one off tiger-->
+            <!--maybe check out https://developers.themoviedb.org/3/movies/get-movie-reviews -->
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:outlineAmbientShadowColor="@color/dark_gray"
+                app:cardBackgroundColor="@color/silver_white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                app:contentPadding="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/card4_reviews_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="REVIEWS"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/see_all_card4"
+                        android:enabled="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="18dp"
+                        android:onClick="seeAllReviews"
+                        android:text="See All"
+                        android:textColor="@color/fbutton_color_peter_river"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                    android:id="@+id/card4_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Author"
+                    android:layout_below="@+id/card4_reviews_heading"
+                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/card4_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card4_author"
+                        android:text="content"
+                        />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Card 5 list of similar movies (use https://developers.themoviedb.org/3/movies/get-similar-movies)-->
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

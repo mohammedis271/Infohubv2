@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    tools:context=".NewsSearchActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid_essentials"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        app:columnCount="2"
+        app:rowCount="4">
+
+        <TextView
+            android:id="@+id/text_essentials_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search for:"
+            android:textSize="19sp"
+            android:fontFamily="@font/thasadith_bold_italic"
+            android:textColor="@color/dark_gray"
+
+            app:layout_column="0"
+            app:layout_row="0"
+            app:layout_columnSpan="2"
+            android:gravity="start"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1" />
+
+        <Spinner
+            android:id="@+id/spinner_search_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/text_essentials_story_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:text="Choose story type"
+            android:fontFamily="@font/thasadith_bold"
+            android:textColor="@color/dark_gray"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/text_essentials_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:text="Based on Location"
+            android:fontFamily="@font/thasadith_bold"
+            android:textColor="@color/dark_gray"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <Switch
+            android:id="@+id/switch_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes/No"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <TextView
+            android:id="@+id/set_country_heading"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Choose a country:"
+            android:height="30dp"
+            android:fontFamily="@font/thasadith_bold"
+            android:textColor="@color/dark_gray"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <Spinner
+            android:id="@+id/spinner_country_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="1"
+            app:layout_row="3"/>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <View
+        android:id="@+id/divider_essentials_options"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@+id/grid_essentials"
+        android:background="?android:attr/listDivider" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_essentials_options"
+        app:rowCount="5"
+        app:columnCount="2">
+
+        <TextView
+            android:id="@+id/options_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refine your search ?"
+            android:textSize="19sp"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_columnSpan="2"
+            android:fontFamily="@font/thasadith_bold_italic"
+            android:textColor="@color/dark_gray"/>
+
+        <TextView
+            android:id="@+id/keyword_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Using a Keyword:"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            android:fontFamily="@font/thasadith_bold"
+            android:textColor="@color/dark_gray"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <EditText
+            android:id="@+id/edit_text_keyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="use words like 'samsung'"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/date_published_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date Published"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            android:fontFamily="@font/thasadith_bold"
+            android:textColor="@color/dark_gray"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <EditText
+            android:id="@+id/edit_text_date_published"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="1"
+            app:layout_row="2"
+            android:hint="yyyy-mm-dd"/>
+
+        <TextView
+            android:id="@+id/language_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <Spinner
+            android:id="@+id/spinner_language_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="1"
+            app:layout_row="3" />
+
+    </androidx.gridlayout.widget.GridLayout>
+    <View
+        android:id="@+id/divider_options_sort"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@+id/grid_options"
+        android:background="?android:attr/listDivider" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_options_sort"
+        app:rowCount="1"
+        app:columnCount="2">
+
+        <TextView
+            android:id="@+id/sort_by_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort By:"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            android:fontFamily="@font/thasadith_bold"
+            android:textColor="@color/dark_gray"
+            app:layout_column="0"
+            app:layout_row="0"
+            />
+        <Spinner
+            android:id="@+id/spinner_sort_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_column="1"
+            app:layout_row="0"/>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/save_search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grid_sort"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/thasadith_bold"
+        android:foreground="@drawable/image_fade_drawable"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="OK"
+        android:layout_alignBaseline="@+id/save_search_btn"
+        android:elevation="100dp"
+        android:textSize="16sp"
+        />
+
+</RelativeLayout>

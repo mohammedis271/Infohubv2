@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="12dp"
+    app:contentPadding="4dp"
+    android:layout_gravity="center_horizontal"
+    android:outlineAmbientShadowColor="@color/dark_gray"
+
+    app:cardBackgroundColor="@color/silver_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/image_resource_card_layout"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_centerVertical="true"
+
+            android:paddingStart="3sp"
+            android:paddingEnd="3sp"
+            app:srcCompat="@android:drawable/screen_background_light_transparent"  />
+
+        <TextView
+            android:id="@+id/title_text_card_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/image_resource_card_layout"
+            android:layout_toEndOf="@id/image_resource_card_layout"
+            android:textStyle="bold"
+            android:paddingStart="8sp"
+            android:textColor="@color/black"
+            android:text="@string/no_content"
+            android:textSize="16sp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/description_text_card_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/image_resource_card_layout"
+            android:layout_below="@id/title_text_card_layout"
+            android:layout_alignBottom="@+id/image_resource_card_layout"
+            android:fontFamily="@font/thasadith_bold"
+            android:paddingStart="8sp"
+            android:textColor="@color/black"
+            android:text="@string/no_content"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
